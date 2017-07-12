@@ -2,8 +2,8 @@
 <div class="container is-one-mobile">
 	<div class="notification" style="background-color:#fff;">
 		<center><br>
-		<!-- <div v-if="load == false "><p class="title is-3" style="color:black;"><b> Loading... </b></p> </div>
-		<div v-if="load == true ">  -->
+		<div v-if="load == false "><p class="title is-3" style="color:black;"><b> Loading... </b></p> </div>
+		<div v-if="load == true "> 
 			<div class="columns " ><!-- 1 -->
 				<div class="column" style="margin-left:25%"><b>Unit : {{unit}} </b></div>
 				<div class="column" >
@@ -218,7 +218,7 @@
 				<div class="column" ></div>
 				<div class="column" ></div>
 				<div class="column" ></div>
-			<!-- </div> --><!-- div check load -->
+			 </div>  <!-- div check load-->
 			
 		<!-- <i class="fa fa-arrow-right"></i> -->
 		</div>
@@ -233,16 +233,6 @@
 		name: 'network',
 		mounted: function () {
 			this.getSheet()
-			/*var sizeImage = document.querySelector(".columns")
-			var widthImage = sizeImage.clientWidth;
-			var heightImage= sizeImage.clientHeight;
-			console.log(widthImage,heightImage)*/
-						// var point 	  =$('#img-floor-plan').position();
-						// var x   	  = event.clientX - 25;
-						// var y   	  = event.clientY - 25;
-						// var icon 	  = $("<img></img>");
-			// var fileImage = "img/img1.png";
-			// console.log( 'xWeb: ',x,'width: ',widthImage ,'|| yWeb: ',y,'heigh: ',heightImage );
 		},
 		data () {
 			return {
@@ -300,8 +290,9 @@
 					for(let i in detail[ip_]){	
 						this.addData(ip_, inbound_, outbound_, detail[ip_][i]['status'], detail[ip_][i]['interface'],detail[ip_][i]['in'], detail[ip_][i]['out'])
 					}
+					setInterval(()=>{this.load = true},5000)
+					
 				})
-				this.load = true
 			},
 			addData (ip, inboundTotal_, outboundTotal_, status_, name_, inbound_, outbound_){
 
