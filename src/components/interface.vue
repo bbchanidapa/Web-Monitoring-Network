@@ -230,7 +230,7 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.7.1'][col-1]['interface'].substring(12,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'V' " id="fa"> {{'Vlan'+ detailInterface['10.99.7.1'][col-1]['interface'].substring(12,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span>
 	  					    <span v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.7.1'][col-1]['interface'].substring(18,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span>
 						     <span v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.7.1'][col-1]['interface'].substring(15,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span> 
 
@@ -238,21 +238,21 @@
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'V' " id="fa"> {{'Fa'+detailInterface['10.99.7.1'][col+25]['interface'].substring(12,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.99.7.1'][col+25]['interface'].substring(12,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
 	  					    <span v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.99.7.1'][col+25]['interface'].substring(18,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
 						     <span v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.99.7.1'][col+25]['interface'].substring(15,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
 
 							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.7.1'][col+25] " @click="activeModal(detailInterface['10.99.7.1'][col+25])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b>
-						<b v-for="col in portRJ">
-			      			{{detailInterface['10.99.7.1'][col+36]}}
+						<!-- <b v-for="col in portRJ"> -->
+			      			<!-- {{detailInterface['10.99.7.1'][col+36]}} -->
 							<!-- <span v-if="detailInterface['10.99.7.1'][col+36
 						     ]['interface'].substring(0,1) == 'V' " style="font-size: 11px;position:fixed; margin-top: -0.7%;padding-left:0.2%; ">Vlan304</span>
 
 							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.7.1'][col+25] " @click="activeModal(detailInterface['10.99.7.1'][col+25])"> -->
-							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
-						</b><hr class="br">	
+							<!-- <span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span> -->
+						<!-- </b><hr class="br">	 -->
 					</center>
 				</div>
 			</div>
@@ -398,8 +398,8 @@
 							let ip = this.interfaces[index]['ip']
 							let name = this.interfaces[index]['detail'][indexInDetail]['interface']
 
-							if(name.substring(0,1) != 'V' && name.substring(0,1) != 'G' && name.substring(0,1) != 'T'){
-								console.log(name)
+							if(name.substring(0,1) == 'V' && name.substring(0,1) != 'G' && name.substring(0,1) != 'T'){
+							console.log(name)
 								if(ip == "10.99.2.1" && name == "Vlan304" ){
 									if (ip in this.detailInterface){
 										this.detailInterface[ip].push(this.interfaces[index]['detail'][indexInDetail])
@@ -412,6 +412,7 @@
 										}
 								    }	
 								}
+
 								else if(ip == "10.99.1.1" && name == "Vlan304" ){
 									if (ip in this.detailInterface){
 										this.detailInterface[ip].push(this.interfaces[index]['detail'][indexInDetail])
@@ -425,7 +426,7 @@
 								    }	
 								}
 							}else{
-								console.log(ip,this.detailInterface[ip])
+								//console.log(ip,this.detailInterface[ip])
 								if (ip in this.detailInterface){
 									this.detailInterface[ip].push(this.interfaces[index]['detail'][indexInDetail])
 									let tus = this.interfaces[index]['detail'][indexInDetail]['status']
