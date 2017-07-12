@@ -16,8 +16,8 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <p v-if="index.ip != '10.9.99.1' "><strong>{{index.name}}</strong> <small>{{index.ip}}</small> </p>
-                <p v-if="index.ip == '10.9.99.1' "><strong>ISR-4451</strong> <small>{{index.ip}}</small></p>
+                <p v-if="index.ip != '10.99.0.1' "><strong>{{index.name}}</strong> <small>{{index.ip}}</small> </p>
+                <p v-if="index.ip == '10.99.0.1' "><strong>ISR-4451</strong> <small>{{index.ip}}</small></p>
               </div>
             </div>
           </article>
@@ -126,19 +126,19 @@
   },
   data () {
     return {
-      ip: '10.77.4.1',
+      ip: '10.99.1.1',
       urlDetail: "https://get-api-myproject.herokuapp.com/1USfbjHmVE0vpOPvq8mDpGbad-zX6PTDxUeQBDlcs6JI/sheet1!C:C",//pi
       urlDevice: "https://get-api-myproject.herokuapp.com/1WXmhTnJ9Dw6ana0tqtrV1mq2tyzM6TeErNA-_6aZ2fA/sheet1!C:C",
       urlTime: "https://get-api-myproject.herokuapp.com/1WXmhTnJ9Dw6ana0tqtrV1mq2tyzM6TeErNA-_6aZ2fA/sheet1!B:B",
       dataChart: {
-        '10.77.4.1': { inbound:[], outbound:[] },
-        '10.77.7.2': { inbound:[], outbound:[] },
-        '10.77.1.2': { inbound:[], outbound:[] },    
-        '10.77.3.2': { inbound:[], outbound:[] },
-        '10.77.5.2': { inbound:[], outbound:[] },
-        '10.77.8.2': { inbound:[], outbound:[] },
-        '10.77.7.1': { inbound:[], outbound:[] },
-        '10.9.99.1': { inbound:[], outbound:[] }
+        '10.99.1.1': { inbound:[], outbound:[] },
+        '10.99.3.1': { inbound:[], outbound:[] },
+        '10.99.4.1': { inbound:[], outbound:[] },    
+        '10.99.6.1': { inbound:[], outbound:[] },
+        '10.99.5.1': { inbound:[], outbound:[] },
+        '10.99.7.1': { inbound:[], outbound:[] },
+        '10.99.2.1': { inbound:[], outbound:[] },
+        '10.99.0.1': { inbound:[], outbound:[] }
       },
       averagein: 0,
       averageout: 0,
@@ -176,14 +176,14 @@
       load: false,
       traffic: '',
       data: {
-        '10.77.4.1': {},
-        '10.77.1.2': {},
-        '10.77.7.2': {},
-        '10.77.3.2': {},
-        '10.77.5.2': {},
-        '10.77.8.2': {},
-        '10.77.7.1': {},
-        '10.9.99.1': {}
+        '10.99.1.1': {},
+        '10.99.4.1': {},
+        '10.99.3.1': {},
+        '10.99.6.1': {},
+        '10.99.5.1': {},
+        '10.99.7.1': {},
+        '10.99.2.1': {},
+        '10.99.0.1': {}
       }
 
     }
@@ -194,7 +194,7 @@
         let values = res.data.values
         let length  = values.length-1
         this.detail = JSON.parse(values[length][0])
-        let ip = '10.77.4.1'
+        let ip = '10.99.1.1'
 
         for(let index in this.detail){             
           if(ip === this.detail[index]['ip']){
@@ -234,7 +234,7 @@
                    this.colorDetail['temp'] = '#fcdb3b;' 
                    this.colorDetail['warning'] =  '#be353e;' 
                  } 
-                 if(ip === '10.77.4.1'){
+                 if(ip === '10.99.1.1'){
                    this.detail[index]['ios'] = 'Cisco Catalyst 4500 L3 Switch'
                    this.software = 'cat4500e-LANBASEK9-M'
                    this.version = '15.0(2)SG1'
@@ -265,35 +265,35 @@
               let inbounds = parseFloat(inboundAfter.toFixed(2))
               let outbounds =  parseFloat(outboundAfter.toFixed(2))
 
-              if(ip === '10.77.4.1'){
+              if(ip === '10.99.1.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds) 
               }
-              else if(ip === '10.77.7.2'){
+              else if(ip === '10.99.3.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds) 
               }
-              else if(ip === '10.77.1.2'){
+              else if(ip === '10.99.4.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds)  
               }
-              else if(ip === '10.77.3.2'){
+              else if(ip === '10.99.6.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds)  
               }
-              else if(ip === '10.77.5.2'){
+              else if(ip === '10.99.5.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds)  
               }
-              else if(ip === '10.77.8.2'){
+              else if(ip === '10.99.7.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds)  
               }
-              else if(ip === '10.77.7.1'){
+              else if(ip === '10.99.2.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds)  
               }
-              else if(ip === '10.9.99.1'){
+              else if(ip === '10.99.0.1'){
                 this.dataChart[ip]['inbound'].push(inbounds)
                 this.dataChart[ip]['outbound'].push(outbounds)  
               }
@@ -302,7 +302,7 @@
             }//for      
             
           } 
-          this.showChart ('10.77.4.1')
+          this.showChart ('10.99.1.1')
         })  
 
     },//funtion
@@ -500,7 +500,7 @@
 
      for(let index in this.detail){             
       if(ip === this.detail[index]['ip']){
-        if(ip == '10.9.99.1')this.detail[index]['name'] = 'ISR-4451'
+        if(ip == '10.99.0.1')this.detail[index]['name'] = 'ISR-4451'
 
         this.showDetail = this.detail[index]
             
@@ -551,17 +551,17 @@
                   this.colorDetail['temp'] = '#fffacd;' 
                 }
 
-               if(ip === '10.77.4.1'){
+               if(ip === '10.99.1.1'){
                    this.detail[index]['ios'] = 'Cisco Catalyst 4500 L3 Switch'
                    this.software = 'cat4500e-LANBASEK9-M'
                    this.version = '15.0(2)SG1'
               }
-               else if(ip === '10.77.7.1'){
+               else if(ip === '10.99.2.1'){
                  this.detail[index]['ios'] = 'Catalyst L3 Switch'
                  this.software = 'CAT3K_CAA-UNIVERSALK9-M'
                  this.version = '03.06.05E'
                }
-               else if(ip === '10.9.99.1'){
+               else if(ip === '10.99.0.1'){
                  this.detail[index]['ios'] = 'ISR'
                  this.software = 'X86_64_LINUX_IOSD-UNIVERSALK9-M'
                  this.version = '15.5(3)S4b'

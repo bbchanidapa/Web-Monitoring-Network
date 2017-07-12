@@ -20,9 +20,9 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <p v-show="index.ip != '10.9.99.1' " style="padding-bottom:0rem;margin-bottom:0em;"><strong>{{index.name}}</strong> <!-- <small>{{index.ip}}</small> --> </p>
-                  <p v-show="index.ip == '10.9.99.1' " style="padding-bottom:0rem;margin-bottom:0em;"><strong>ISR-4451</strong> <!-- <small>{{index.ip}}</small> --></p>
-                  <p ><i class="fa fa-tachometer" ></i> Cpu: {{index.cpu}}%</p><!-- style="color:#40e2bd;" -->
+                  <p v-show="index.ip != '10.99.0.1' " style="padding-bottom:0rem;margin-bottom:0em;"><strong>{{index.name}}</strong> <!-- <small>{{index.ip}}</small> --> </p>
+                  <p v-show="index.ip == '10.99.0.1' " style="padding-bottom:0rem;margin-bottom:0em;"><strong>ISR-4451</strong> <!-- <small>{{index.ip}}</small> --></p>
+                  <p ><!-- <i class="fa fa-tachometer" > </i>--> Cpu: {{index.cpu}}%</p><!-- style="color:#40e2bd;" -->
                 </div>
               </div>
             </article>
@@ -42,7 +42,6 @@
              <div class="field">
                 <p class="title is-4" style="line-height: 0;"><b>Event Log</b></p>
                  <span v-for="(data,i) in dataEvent">
-
                    <p v-show="data['event'] == 'status' ">{{dateEvent[i]}} {{timeEvent[i]}}{{' Interface ' + data['data']+ ' is Down' }}</p>
                    <p v-show="data['event'] == 'mem' ">{{dateEvent[i]}} {{timeEvent[i]}}{{' Your memory was used more than 1 GB! ' + data['data'] }}</p>
                    <p v-show="data['event'] == 'cpu' ">{{dateEvent[i]}} {{timeEvent[i]}}{{' Your CPU was used more then 80% ' + data['data'] }}</p>
@@ -226,16 +225,14 @@
       })
       axios.get(this.urlEvent).then(res => {
         let values = res.data.values
-        let length  = values.length-12
+        let length  = values.length-2
         let arr = []
-   
 
         for (length ; length < values.length; length++) {
           let json = JSON.parse( values[length][2])
-          
             for(let i in json){
               for(let c in json[i]){
-                if(Object.keys(json) != '' && this.dataEvent.length < 10){
+                if(Object.keys(json) != '' && this.dataEvent.length < 6){
                   this.dataEvent.push({
                     event: i,
                     data: this.toStr(json[i][c],i)
@@ -257,7 +254,7 @@
        
       for (length ; length < values.length; length++) {
         let after = JSON.parse(values[length][1] )
-
+        console.log('afterIn',afterIn)
         let afterIn = Number(after['inbound'].substring(0,after['inbound'].search(" ")))
         let afterOut = Number(after['outbound'].substring(0,after['outbound'].search(" ")))
         
@@ -293,28 +290,28 @@
                 this.unit = ratioArr[index][ip].substring(ratioArr[index][ip].search(" ") ,ratioArr[index][ip].length)
                 let json = {}              
 
-                if (ip == '10.77.1.2') {
+                if (ip == '10.99.4.1') {
                   json['R124'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.77.7.2') {
+                else if (ip == '10.99.3.1') {
                   json['R101C'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.77.3.2') {
+                else if (ip == '10.99.6.1') {
                   json['R330A'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.77.8.2') {
+                else if (ip == '10.99.7.1') {
                   json['Rshop'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.77.5.2') {
+                else if (ip == '10.99.5.1') {
                   json['R415'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.77.4.1') {
+                else if (ip == '10.99.1.1') {
                   json['SW4503'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.9.99.1') {
+                else if (ip == '10.99.0.1') {
                   json['ISR-4451'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
-                else if (ip == '10.77.7.1') {
+                else if (ip == '10.99.2.1') {
                   json['SW3850'] = Number(ratioArr[index][ip].substring(0,ratioArr[index][ip].search(" "))).toFixed(2)
                 }
                 traffic.push(json)
