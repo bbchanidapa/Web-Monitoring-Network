@@ -290,7 +290,7 @@
 					for(let i in detail[ip_]){	
 						this.addData(ip_, inbound_, outbound_, detail[ip_][i]['status'], detail[ip_][i]['interface'],detail[ip_][i]['in'], detail[ip_][i]['out'])
 					}
-					setInterval(()=>{this.load = true},5000)
+					setInterval(()=>{this.load = true},8000)
 					
 				})
 			},
