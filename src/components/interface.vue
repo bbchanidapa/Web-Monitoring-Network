@@ -54,12 +54,12 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in 13"><!--style="position:absolute; color:#fff;"  -->
-							<span  v-if="detailInterface['10.77.4.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.4.1'][col-1]['interface'].substring(12,detailInterface['10.77.4.1'][col-1]['interface'].length) }} </span>
-						    <span v-if="detailInterface['10.77.4.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.4.1'][col-1]['interface'].substring(18,detailInterface['10.77.4.1'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.77.4.1'][col-1]['interface'].substring(15,detailInterface['10.77.4.1'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.1.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.1.1'][col-1]['interface'].substring(12,detailInterface['10.99.1.1'][col-1]['interface'].length) }} </span>
+						    <span v-if="detailInterface['10.99.1.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.1.1'][col-1]['interface'].substring(18,detailInterface['10.99.1.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.99.1.1'][col-1]['interface'].substring(15,detailInterface['10.99.1.1'][col-1]['interface'].length) }} </span>
 						     
 
-							<img class="rj" src="../img/rj1.png" :style="'hover:background-color: yellow;background-color:'+status['10.77.4.1'][col-1]" @click="activeModal(detailInterface['10.77.4.1'][col-1])" >
+							<img class="rj" src="../img/rj1.png" :style="'hover:background-color: yellow;background-color:'+status['10.99.1.1'][col-1]" @click="activeModal(detailInterface['10.99.1.1'][col-1])" >
 
 							<span style="padding-left: 2rem; " v-if="col == 2"></span>
 							<span style="padding-left: 2rem; " v-if="col == 6"></span>
@@ -70,22 +70,22 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in 24">
-							<span  v-if="detailInterface['10.77.4.1'][col+12]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.4.1'][col+12]['interface'].substring(12,detailInterface['10.77.4.1'][col+12]['interface'].length) }} </span>
-						    <span v-if="detailInterface['10.77.4.1'][col+12]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.4.1'][col+12]['interface'].substring(18,detailInterface['10.77.4.1'][col+12]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col+12]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.77.4.1'][col+12]['interface'].substring(15,detailInterface['10.77.4.1'][col+12]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.1.1'][col+12]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.1.1'][col+12]['interface'].substring(12,detailInterface['10.99.1.1'][col+12]['interface'].length) }} </span>
+						    <span v-if="detailInterface['10.99.1.1'][col+12]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.1.1'][col+12]['interface'].substring(18,detailInterface['10.99.1.1'][col+12]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col+12]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.99.1.1'][col+12]['interface'].substring(15,detailInterface['10.99.1.1'][col+12]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.4.1'][col+12]" @click="activeModal(detailInterface['10.77.4.1'][col+12])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.1.1'][col+12]" @click="activeModal(detailInterface['10.99.1.1'][col+12])">
 
 							<span style="padding-left: 0.5em; " v-if="(col%6) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in 24">
-							<span  v-if="detailInterface['10.77.4.1'][col+36]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.4.1'][col+36]['interface'].substring(12,detailInterface['10.77.4.1'][col+36]['interface'].length) }} </span>
-						    <span v-if="detailInterface['10.77.4.1'][col+36]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.4.1'][col+36]['interface'].substring(18,detailInterface['10.77.4.1'][col+36]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col+36]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.77.4.1'][col+36]['interface'].substring(15,detailInterface['10.77.4.1'][col+36]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col+36
+							<span  v-if="detailInterface['10.99.1.1'][col+36]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.1.1'][col+36]['interface'].substring(12,detailInterface['10.99.1.1'][col+36]['interface'].length) }} </span>
+						    <span v-if="detailInterface['10.99.1.1'][col+36]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.1.1'][col+36]['interface'].substring(18,detailInterface['10.99.1.1'][col+36]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col+36]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.99.1.1'][col+36]['interface'].substring(15,detailInterface['10.99.1.1'][col+36]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col+36
 						     ]['interface'].substring(0,1) == 'V' " style="font-size: 11px;position:fixed; margin-top: -0.7%;padding-left:0.2%; ">Vlan304</span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.4.1'][col+36]" @click="activeModal(detailInterface['10.77.4.1'][col+36])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.1.1'][col+36]" @click="activeModal(detailInterface['10.99.1.1'][col+36])">
 							<span style="padding-left: 0.5em; " v-if="(col%6) == 0"></span>
 						</b>	
 					</center>
@@ -96,12 +96,12 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in 13"><!--style="position:absolute; color:#fff;"  -->
-							<span  v-if="detailInterface['10.77.4.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.4.1'][col-1]['interface'].substring(12,detailInterface['10.77.4.1'][col-1]['interface'].length) }} </span>
-						    <span v-if="detailInterface['10.77.4.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.4.1'][col-1]['interface'].substring(18,detailInterface['10.77.4.1'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.77.4.1'][col-1]['interface'].substring(15,detailInterface['10.77.4.1'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.1.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.1.1'][col-1]['interface'].substring(12,detailInterface['10.99.1.1'][col-1]['interface'].length) }} </span>
+						    <span v-if="detailInterface['10.99.1.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.1.1'][col-1]['interface'].substring(18,detailInterface['10.99.1.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.99.1.1'][col-1]['interface'].substring(15,detailInterface['10.99.1.1'][col-1]['interface'].length) }} </span>
 						     
 
-							<img class="rj" src="../img/rj1.png" :style="'hover:background-color: yellow;background-color:'+status['10.77.4.1'][col-1]" @click="activeModal(detailInterface['10.77.4.1'][col-1])" >
+							<img class="rj" src="../img/rj1.png" :style="'hover:background-color: yellow;background-color:'+status['10.99.1.1'][col-1]" @click="activeModal(detailInterface['10.99.1.1'][col-1])" >
 
 							<span style="padding-left: 2rem; " v-if="col == 2"></span>
 							<span style="padding-left: 2rem; " v-if="col == 6"></span>
@@ -112,22 +112,22 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in 24">
-							<span  v-if="detailInterface['10.77.4.1'][col+12]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.4.1'][col+12]['interface'].substring(12,detailInterface['10.77.4.1'][col+12]['interface'].length) }} </span>
-						    <span v-if="detailInterface['10.77.4.1'][col+12]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.4.1'][col+12]['interface'].substring(18,detailInterface['10.77.4.1'][col+12]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col+12]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.77.4.1'][col+12]['interface'].substring(15,detailInterface['10.77.4.1'][col+12]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.1.1'][col+12]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.1.1'][col+12]['interface'].substring(12,detailInterface['10.99.1.1'][col+12]['interface'].length) }} </span>
+						    <span v-if="detailInterface['10.99.1.1'][col+12]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.1.1'][col+12]['interface'].substring(18,detailInterface['10.99.1.1'][col+12]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col+12]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.99.1.1'][col+12]['interface'].substring(15,detailInterface['10.99.1.1'][col+12]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.4.1'][col+12]" @click="activeModal(detailInterface['10.77.4.1'][col+12])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.1.1'][col+12]" @click="activeModal(detailInterface['10.99.1.1'][col+12])">
 
 							<span style="padding-left: 0.5em; " v-if="(col%6) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in 24">
-							<span  v-if="detailInterface['10.77.4.1'][col+36]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.4.1'][col+36]['interface'].substring(12,detailInterface['10.77.4.1'][col+36]['interface'].length) }} </span>
-						    <span v-if="detailInterface['10.77.4.1'][col+36]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.4.1'][col+36]['interface'].substring(18,detailInterface['10.77.4.1'][col+36]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col+36]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.77.4.1'][col+36]['interface'].substring(15,detailInterface['10.77.4.1'][col+36]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.4.1'][col+36
+							<span  v-if="detailInterface['10.99.1.1'][col+36]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.1.1'][col+36]['interface'].substring(12,detailInterface['10.99.1.1'][col+36]['interface'].length) }} </span>
+						    <span v-if="detailInterface['10.99.1.1'][col+36]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.1.1'][col+36]['interface'].substring(18,detailInterface['10.99.1.1'][col+36]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col+36]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' + detailInterface['10.99.1.1'][col+36]['interface'].substring(15,detailInterface['10.99.1.1'][col+36]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.1.1'][col+36
 						     ]['interface'].substring(0,1) == 'V' " style="font-size: 11px;position:fixed; margin-top: -0.7%;padding-left:0.2%; ">Vlan304</span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.4.1'][col+36]" @click="activeModal(detailInterface['10.77.4.1'][col+36])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.1.1'][col+36]" @click="activeModal(detailInterface['10.99.1.1'][col+36])">
 							<span style="padding-left: 0.5em; " v-if="(col%6) == 0"></span>
 						</b>	
 					</center>
@@ -138,19 +138,19 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.5.2'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.5.2'][col-1]['interface'].substring(12,detailInterface['10.77.5.2'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.5.2'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.5.2'][col-1]['interface'].substring(18,detailInterface['10.77.5.2'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.5.2'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.5.2'][col-1]['interface'].substring(15,detailInterface['10.77.5.2'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.5.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.5.1'][col-1]['interface'].substring(12,detailInterface['10.99.5.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.5.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.5.1'][col-1]['interface'].substring(18,detailInterface['10.99.5.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.5.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.5.1'][col-1]['interface'].substring(15,detailInterface['10.99.5.1'][col-1]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.5.2'][col-1]" @click="activeModal(detailInterface['10.77.5.2'][col-1])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.5.1'][col-1]" @click="activeModal(detailInterface['10.99.5.1'][col-1])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.5.2'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.77.5.2'][col+25]['interface'].substring(12,detailInterface['10.77.5.2'][col+25]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.5.2'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.5.2'][col+25]['interface'].substring(18,detailInterface['10.77.5.2'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.5.2'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.5.2'][col+25]['interface'].substring(15,detailInterface['10.77.5.2'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.5.1'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa' + detailInterface['10.99.5.1'][col+25]['interface'].substring(12,detailInterface['10.99.5.1'][col+25]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.5.1'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.5.1'][col+25]['interface'].substring(18,detailInterface['10.99.5.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.5.1'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.5.1'][col+25]['interface'].substring(15,detailInterface['10.99.5.1'][col-1]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.5.2'][col+25]" @click="activeModal(detailInterface['10.77.5.2'][col+25])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.5.1'][col+25]" @click="activeModal(detailInterface['10.99.5.1'][col+25])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b>	
 					</center>
@@ -161,19 +161,19 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.1.2'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.77.1.2'][col-1]['interface'].substring(12,detailInterface['10.77.1.2'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.1.2'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.1.2'][col-1]['interface'].substring(18,detailInterface['10.77.1.2'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.1.2'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.1.2'][col-1]['interface'].substring(15,detailInterface['10.77.1.2'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.4.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.4.1'][col-1]['interface'].substring(12,detailInterface['10.99.4.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.4.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.4.1'][col-1]['interface'].substring(18,detailInterface['10.99.4.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.4.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.4.1'][col-1]['interface'].substring(15,detailInterface['10.99.4.1'][col-1]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.1.2'][col-1]" @click="activeModal(detailInterface['10.77.1.2'][col-1])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.4.1'][col-1]" @click="activeModal(detailInterface['10.99.4.1'][col-1])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.1.2'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.77.1.2'][col+25]['interface'].substring(12,detailInterface['10.77.1.2'][col+25]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.1.2'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.77.1.2'][col+25]['interface'].substring(18,detailInterface['10.77.1.2'][col+25]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.1.2'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.77.1.2'][col+25]['interface'].substring(15,detailInterface['10.77.1.2'][col+25]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.4.1'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.99.4.1'][col+25]['interface'].substring(12,detailInterface['10.99.4.1'][col+25]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.4.1'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.99.4.1'][col+25]['interface'].substring(18,detailInterface['10.99.4.1'][col+25]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.4.1'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.99.4.1'][col+25]['interface'].substring(15,detailInterface['10.99.4.1'][col+25]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.1.2'][col+25]" @click="activeModal(detailInterface['10.77.1.2'][col+25])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.4.1'][col+25]" @click="activeModal(detailInterface['10.99.4.1'][col+25])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b>	
 					</center>
@@ -184,19 +184,19 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.3.2'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.77.3.2'][col-1]['interface'].substring(12,detailInterface['10.77.3.2'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.3.2'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.3.2'][col-1]['interface'].substring(18,detailInterface['10.77.3.2'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.3.2'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.3.2'][col-1]['interface'].substring(15,detailInterface['10.77.3.2'][col-1]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.6.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.6.1'][col-1]['interface'].substring(12,detailInterface['10.99.6.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.6.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.6.1'][col-1]['interface'].substring(18,detailInterface['10.99.6.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.6.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.6.1'][col-1]['interface'].substring(15,detailInterface['10.99.6.1'][col-1]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.3.2'][col-1]" @click="activeModal(detailInterface['10.77.3.2'][col-1])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.6.1'][col-1]" @click="activeModal(detailInterface['10.99.6.1'][col-1])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.3.2'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.77.3.2'][col+25]['interface'].substring(12,detailInterface['10.77.3.2'][col+25]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.3.2'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.77.3.2'][col+25]['interface'].substring(18,detailInterface['10.77.3.2'][col+25]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.3.2'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.77.3.2'][col+25]['interface'].substring(15,detailInterface['10.77.3.2'][col+25]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.6.1'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.99.6.1'][col+25]['interface'].substring(12,detailInterface['10.99.6.1'][col+25]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.6.1'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.99.6.1'][col+25]['interface'].substring(18,detailInterface['10.99.6.1'][col+25]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.6.1'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.99.6.1'][col+25]['interface'].substring(15,detailInterface['10.99.6.1'][col+25]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.77.3.2'][col+25]" @click="activeModal(detailInterface['10.77.3.2'][col+25])">
+							<img class="rj" src="../img/rj1.png" :style="'background-color:'+status['10.99.6.1'][col+25]" @click="activeModal(detailInterface['10.99.6.1'][col+25])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b>	
 					</center>
@@ -207,19 +207,19 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.7.2'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.77.7.2'][col-1]['interface'].substring(12,detailInterface['10.77.7.2'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.7.2'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.7.2'][col-1]['interface'].substring(18,detailInterface['10.77.7.2'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.7.2'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.7.2'][col-1]['interface'].substring(15,detailInterface['10.77.7.2'][col-1]['interface'].length) }} </span> 
+							<span  v-if="detailInterface['10.99.3.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.3.1'][col-1]['interface'].substring(12,detailInterface['10.99.3.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.3.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.3.1'][col-1]['interface'].substring(18,detailInterface['10.99.3.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.3.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.3.1'][col-1]['interface'].substring(15,detailInterface['10.99.3.1'][col-1]['interface'].length) }} </span> 
 
-							<img class="rj" src="../img/rj1.png"  :style=" 'background-color:' + status['10.77.7.2'][col-1]" @click="activeModal(detailInterface['10.77.7.2'][col-1])">
+							<img class="rj" src="../img/rj1.png"  :style=" 'background-color:' + status['10.99.3.1'][col-1]" @click="activeModal(detailInterface['10.99.3.1'][col-1])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.7.2'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.77.7.2'][col+25]['interface'].substring(12,detailInterface['10.77.7.2'][col+25]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.7.2'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.77.7.2'][col+25]['interface'].substring(18,detailInterface['10.77.7.2'][col+25]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.7.2'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.77.7.2'][col+25]['interface'].substring(15,detailInterface['10.77.7.2'][col+25]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.3.1'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.99.3.1'][col+25]['interface'].substring(12,detailInterface['10.99.3.1'][col+25]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.3.1'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.99.3.1'][col+25]['interface'].substring(18,detailInterface['10.99.3.1'][col+25]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.3.1'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.99.3.1'][col+25]['interface'].substring(15,detailInterface['10.99.3.1'][col+25]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.77.7.2'][col+25]" @click="activeModal(detailInterface['10.77.7.2'][col+25])">
+							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.3.1'][col+25]" @click="activeModal(detailInterface['10.99.3.1'][col+25])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b>	
 					</center>
@@ -230,21 +230,29 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.8.2'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.77.8.2'][col-1]['interface'].substring(12,detailInterface['10.77.8.2'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.8.2'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.8.2'][col-1]['interface'].substring(18,detailInterface['10.77.8.2'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.8.2'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.8.2'][col-1]['interface'].substring(15,detailInterface['10.77.8.2'][col-1]['interface'].length) }} </span> 
+							<span  v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.7.1'][col-1]['interface'].substring(12,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.7.1'][col-1]['interface'].substring(18,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.7.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.7.1'][col-1]['interface'].substring(15,detailInterface['10.99.7.1'][col-1]['interface'].length) }} </span> 
 
-							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.77.8.2'][col-1] " @click="activeModal(detailInterface['10.77.8.2'][col-1])">
+							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.7.1'][col-1] " @click="activeModal(detailInterface['10.99.7.1'][col-1])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
 						</b><hr class="br">
 						<b v-for="col in portRJ">
-							<span  v-if="detailInterface['10.77.8.2'][col+25]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+detailInterface['10.77.8.2'][col+25]['interface'].substring(12,detailInterface['10.77.7.2'][col+25]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.8.2'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.77.8.2'][col+25]['interface'].substring(18,detailInterface['10.77.7.2'][col+25]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.8.2'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.77.8.2'][col+25]['interface'].substring(15,detailInterface['10.77.7.2'][col+25]['interface'].length) }} </span>
+							<span  v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'V' " id="fa"> {{'Fa'+detailInterface['10.99.7.1'][col+25]['interface'].substring(12,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'T' " id="ten"> {{'T'+detailInterface['10.99.7.1'][col+25]['interface'].substring(18,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.7.1'][col+25]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi'+detailInterface['10.99.7.1'][col+25]['interface'].substring(15,detailInterface['10.99.7.1'][col+25]['interface'].length) }} </span>
 
-							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.77.8.2'][col+25] " @click="activeModal(detailInterface['10.77.8.2'][col+25])">
+							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.7.1'][col+25] " @click="activeModal(detailInterface['10.99.7.1'][col+25])">
 							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
-						</b>	
+						</b>
+						<b v-for="col in portRJ">
+			      			{{detailInterface['10.99.7.1'][col+36]}}
+							<!-- <span v-if="detailInterface['10.99.7.1'][col+36
+						     ]['interface'].substring(0,1) == 'V' " style="font-size: 11px;position:fixed; margin-top: -0.7%;padding-left:0.2%; ">Vlan304</span>
+
+							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.7.1'][col+25] " @click="activeModal(detailInterface['10.99.7.1'][col+25])"> -->
+							<span style="padding-left: 0.5em; " v-if="(col%8) == 0"></span>
+						</b><hr class="br">	
 					</center>
 				</div>
 			</div>
@@ -253,13 +261,13 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in 22">
-							<span  v-if="detailInterface['10.77.7.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.77.7.1'][col-1]['interface'].substring(12,detailInterface['10.77.7.1'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.77.7.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.77.7.1'][col-1]['interface'].substring(18,detailInterface['10.77.7.1'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.77.7.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.77.7.1'][col-1]['interface'].substring(15,detailInterface['10.77.7.1'][col-1]['interface'].length) }} </span> 
+							<span  v-if="detailInterface['10.99.2.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.2.1'][col-1]['interface'].substring(12,detailInterface['10.99.2.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.2.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.2.1'][col-1]['interface'].substring(18,detailInterface['10.99.2.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.2.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.2.1'][col-1]['interface'].substring(15,detailInterface['10.99.2.1'][col-1]['interface'].length) }} </span> 
 
-						     <span v-if="detailInterface['10.77.7.1'][col-1]['interface'].substring(0,1) == 'V' " style="font-size: 11px;position:fixed; margin-top: -0.7%;padding-left:0.2%; ">Vlan304</span>
+						     <span v-if="detailInterface['10.99.2.1'][col-1]['interface'].substring(0,1) == 'V' " style="font-size: 11px;position:fixed; margin-top: -0.7%;padding-left:0.2%; ">Vlan304</span>
 
-							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.77.7.1'][col-1] " @click="activeModal(detailInterface['10.77.7.1'][col-1])">
+							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.2.1'][col-1] " @click="activeModal(detailInterface['10.99.2.1'][col-1])">
 							
 						</b>
 						
@@ -271,11 +279,11 @@
 				<div id="switch">
 					<center>
 						<b v-for="col in 5">
-							<span  v-if="detailInterface['10.9.99.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.9.99.1'][col-1]['interface'].substring(12,detailInterface['10.9.99.1'][col-1]['interface'].length) }} </span>
-	  					    <span v-if="detailInterface['10.9.99.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.9.99.1'][col-1]['interface'].substring(18,detailInterface['10.9.99.1'][col-1]['interface'].length) }} </span>
-						     <span v-if="detailInterface['10.9.99.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.9.99.1'][col-1]['interface'].substring(15,detailInterface['10.9.99.1'][col-1]['interface'].length) }} </span> 
+							<span  v-if="detailInterface['10.99.0.1'][col-1]['interface'].substring(0,1) == 'F' " id="fa"> {{'Fa'+ detailInterface['10.99.0.1'][col-1]['interface'].substring(12,detailInterface['10.99.0.1'][col-1]['interface'].length) }} </span>
+	  					    <span v-if="detailInterface['10.99.0.1'][col-1]['interface'].substring(0,1) == 'T' " id="ten"> {{'T' + detailInterface['10.99.0.1'][col-1]['interface'].substring(18,detailInterface['10.99.0.1'][col-1]['interface'].length) }} </span>
+						     <span v-if="detailInterface['10.99.0.1'][col-1]['interface'].substring(0,1) == 'G' " id="gi"> {{'Gi' +detailInterface['10.99.0.1'][col-1]['interface'].substring(15,detailInterface['10.99.0.1'][col-1]['interface'].length) }} </span> 
 
-							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.9.99.1'][col-1] " @click="activeModal(detailInterface['10.9.99.1'][col-1])">
+							<img class="rj" src="../img/rj1.png" :style=" 'background-color:' + status['10.99.0.1'][col-1] " @click="activeModal(detailInterface['10.99.0.1'][col-1])">
 							
 						</b>
 						
@@ -305,14 +313,12 @@
 			this.active = false
 			this.getDetail()
 			this.getInterface()
-
 			this.showInterface('SW4503')
-
 		},
 		data () {
-			return {
-				urlDetail: "https://get-api-myproject.herokuapp.com/1USfbjHmVE0vpOPvq8mDpGbad-zX6PTDxUeQBDlcs6JI/sheet1!C:C",
-				urlInterface: "https://get-api-myproject.herokuapp.com/1eZwYLOMnsvuNNr9tg27-BUiQQMxOXsyQ76XeWFmI4xc/sheet1!C:C",
+			return {// get-api-myproject
+				urlDetail: "https://test-post-api.herokuapp.com/1USfbjHmVE0vpOPvq8mDpGbad-zX6PTDxUeQBDlcs6JI/sheet1!C:C",
+				urlInterface: "https://test-post-api.herokuapp.com/1eZwYLOMnsvuNNr9tg27-BUiQQMxOXsyQ76XeWFmI4xc/sheet1!C:C",
 				detail: '',
 				interfaces: '',
 				showModal: false,
@@ -321,27 +327,37 @@
 				portRJ: 26,
 				range: '',
 				status: {
-					'10.77.4.1':[],
-					'10.77.7.2':[],
-					'10.77.1.2':[],
-					'10.77.3.2':[],
-					'10.77.5.2':[],
-					'10.77.8.2':[],
-					'10.77.7.1':[],
-					'10.9.99.1':[]
+					'10.99.1.1':[],
+					'10.99.3.1':[],
+					'10.99.4.1':[],
+					'10.99.6.1':[],
+					'10.99.5.1':[],
+					'10.99.7.1':[],
+					'10.99.2.1':[],
+					'10.99.0.1':[]
 				},
 				c:0,
 				active:false,
 				showSwitch: '',
 				detailInterface: {
-					'10.77.4.1':[],
-					'10.77.7.2':[],
-					'10.77.1.2':[],
-					'10.77.3.2':[],
-					'10.77.5.2':[],
-					'10.77.8.2':[],
-					'10.77.7.1':[],
-					'10.9.99.1':[]
+					'10.99.1.1':[],
+					'10.99.3.1':[],
+					'10.99.4.1':[],
+					'10.99.6.1':[],
+					'10.99.5.1':[],
+					'10.99.7.1':[],
+					'10.99.2.1':[],
+					'10.99.0.1':[]
+				},
+				vlan: {
+					'10.99.1.1':[],
+					'10.99.3.1':[],
+					'10.99.4.1':[],
+					'10.99.6.1':[],
+					'10.99.5.1':[],
+					'10.99.7.1':[],
+					'10.99.2.1':[],
+					'10.99.0.1':[]
 				},
 				statusBtn:{
 					SW4503:false,
@@ -382,8 +398,9 @@
 							let ip = this.interfaces[index]['ip']
 							let name = this.interfaces[index]['detail'][indexInDetail]['interface']
 
-							if(/*name.substring(0,1) != 'F' &&*/ name.substring(0,1) != 'G' && name.substring(0,1) != 'T'){
-								if(ip == "10.77.7.1" && name == "Vlan304" ){
+							if(name.substring(0,1) != 'V' && name.substring(0,1) != 'G' && name.substring(0,1) != 'T'){
+								console.log(name)
+								if(ip == "10.99.2.1" && name == "Vlan304" ){
 									if (ip in this.detailInterface){
 										this.detailInterface[ip].push(this.interfaces[index]['detail'][indexInDetail])
 										let tus = this.interfaces[index]['detail'][indexInDetail]['status']
@@ -395,8 +412,7 @@
 										}
 								    }	
 								}
-								else if(ip == "10.77.4.1" && name == "Vlan304" ){
-									console.log(index)
+								else if(ip == "10.99.1.1" && name == "Vlan304" ){
 									if (ip in this.detailInterface){
 										this.detailInterface[ip].push(this.interfaces[index]['detail'][indexInDetail])
 										let tus = this.interfaces[index]['detail'][indexInDetail]['status']
@@ -409,6 +425,7 @@
 								    }	
 								}
 							}else{
+								console.log(ip,this.detailInterface[ip])
 								if (ip in this.detailInterface){
 									this.detailInterface[ip].push(this.interfaces[index]['detail'][indexInDetail])
 									let tus = this.interfaces[index]['detail'][indexInDetail]['status']
